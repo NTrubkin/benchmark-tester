@@ -1,7 +1,6 @@
 package ru.nntu.tester;
 
-import ru.nntu.yajb.benchmark.Benchmark;
-import ru.nntu.yajb.timer.Timer;
+import ru.nntu.yajb.aspect.benchmark.Benchmark;
 
 public class Application {
     public static void main(String[] args) throws InterruptedException {
