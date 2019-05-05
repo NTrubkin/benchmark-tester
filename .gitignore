@@ -21,3 +21,5 @@ target/
 out/
 .idea/
 *.iml
+
+/src/main/java/ru/nntu/tester/Playground.java
