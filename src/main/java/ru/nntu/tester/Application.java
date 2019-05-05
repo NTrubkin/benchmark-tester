@@ -18,7 +18,12 @@ public class Application {
 		} catch (Exception e) {
 			LOG.error("Catch an expected exception", e);
 		}
-		app.test1();
+		LOG.info("-----------");
+		app.test4();
+		LOG.info("-----------");
+		app.test5();
+		LOG.info("-----------");
+		app.test6();
 	}
 
 	@Benchmark(collect = META)
@@ -36,5 +41,28 @@ public class Application {
 	private void test3() throws InterruptedException {
 		Thread.sleep(100);
 		throw new ArithmeticException();
+	}
+
+	@Benchmark(collect = META)
+	private void test4() throws InterruptedException {
+		Thread.sleep(100);
+		test1();
+		Thread.sleep(100);
+	}
+
+	@Benchmark(collect = META)
+	private void test5() throws InterruptedException {
+		Thread.sleep(100);
+		test4();
+		Thread.sleep(100);
+	}
+
+
+	@Benchmark(collect = META)
+	private void test6() throws InterruptedException {
+		Thread.sleep(100);
+		test4();
+		test4();
+		Thread.sleep(100);
 	}
 }
