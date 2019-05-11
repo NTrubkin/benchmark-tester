@@ -15,14 +15,11 @@ public class Application {
 		app.test2(2, new ChildClass(), "str");
 		try {
 			app.test3();
-		} catch (Exception e) {
+		} catch (ArithmeticException e) {
 			LOG.error("Catch an expected exception", e);
 		}
-		LOG.info("-----------");
 		app.test4();
-		LOG.info("-----------");
 		app.test5();
-		LOG.info("-----------");
 		app.test6();
 	}
 
